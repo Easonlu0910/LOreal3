@@ -148,9 +148,83 @@
         <p class="bold">This is for YOU</p>
     </div>
     <div class="button-container">
-        <button>Let's Figure it out!</button>
+        <button onclick="startQuiz()">Let's Figure it out!</button>
     </div>
 </section>
+<!-- 啟動畫面 -->
+<div id="intro" class="section" style="display: none;">
+    <!-- 這個可以不用填，因為你的第一頁已經有內容了 -->
+</div>
 
+<!-- 問卷畫面 -->
+<div id="quiz" class="question" style="display: none;">
+  <h2 id="question-text"></h2>
+  <div class="options" id="options"></div>
+  <button class="submit-btn" onclick="nextQuestion()">Next</button>
+</div>
+<script>
+const quizData = [
+  {
+    question: "What skin concerns are you currently experiencing? (Multiple selections allowed)",
+    options: ["Dry skin", "Acne & breakouts", "No particular concerns"],
+    multiple: true
+  },
+  {
+    question: "What is your usual activity environment? (Single selection)",
+    options: ["Mostly indoors, rarely exposed to sunlight", "Frequently outdoors, need UV protection"],
+    multiple: false
+  },
+  {
+    question: "How would you like your skin to look? (Single selection)",
+    options: ["Want to cover acne scars or even out skin tone", "No need for special coverage"],
+    multiple: false
+  },
+  {
+    question: "What is the current condition of your lips? (Multiple selections allowed)",
+    options: ["Chapped lips / dead skin of lips", "Lips are dull and lackluster", "No particular needs"],
+    multiple: true
+  },
+  {
+    question: "What is your preferred style? (Single selection)",
+    options: ["Function-first (Prioritize basic skincare product)", "Appearance-first (Prioritize make-up product)", "All-rounder (A balanced combination)"],
+    multiple: false
+  }
+];
+
+let currentQuestion = 0;
+
+function startQuiz() {
+  document.querySelector('section').style.display = 'none'; // 隱藏第一個區塊
+  document.getElementById('quiz').style.display = 'flex'; // 顯示問卷
+}
+
+function showQuestion() {
+  const q = quizData[currentQuestion];
+  document.getElementById('question-text').textContent = q.question;
+  const optionsContainer = document.getElementById('options');
+  optionsContainer.innerHTML = '';
+  q.options.forEach(option => {
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    input.type = q.multiple ? 'checkbox' : 'radio';
+    input.name = 'option';
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(option));
+    optionsContainer.appendChild(label);
+  });
+}
+
+function nextQuestion() {
+  if (currentQuestion < quizData.length - 1) {
+    currentQuestion++;
+    showQuestion();
+  } else {
+    document.getElementById('quiz').innerHTML = '<h2>Thank you for completing the quiz!</h2>';
+  }
+}
+</script>
+
+
+    
 </body>
 </html>
