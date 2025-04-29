@@ -1,156 +1,311 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buildable Balm</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #D0E3FF;
-            font-family: 'Helvetica Neue', 'Arial', sans-serif;
-            color: #000000;
-            margin: 0;
-            padding: 40px 20px;
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.5;
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 32px;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-        .intro-text {
-            font-size: 16px;
-            margin: 0;
-            font-style: italic;
-        }
-        .intro-text.bold {
-            font-weight: bold;
-            font-style: normal;
-            margin-top: 8px;
-        }
-        .product-image {
-            width: 120px;
-            height: auto;
-            display: block;
-            margin: 40px auto;
-            transform: rotate(-30deg);
-        }
-        .bottom-description {
-            font-size: 16px;
-            text-align: right;
-            margin-top: 40px;
-        }
-        .bottom-description .bold {
-            font-weight: bold;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 18px;
-            margin-top: 40px;
-        }
-        .section-title .bold {
-            font-weight: bold;
-        }
-        .vertical-image {
-            width: 60px;
-            display: block;
-            margin: 30px auto;
-        }
-        .function-list {
-            margin-top: 20px;
-            margin-left: 50%;
-            transform: translateX(-10%);
-        }
-        .function-list p {
-            font-size: 16px;
-            margin: 8px 0;
-        }
-        .function-list p span {
-            font-weight: bold;
-        }
-        .customize-title {
-            text-align: center;
-            font-size: 20px;
-            margin-top: 50px;
-        }
-        .customize-title .underline {
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        .description-text {
-            text-align: center;
-            font-size: 16px;
-            font-style: italic;
-            margin-top: 30px;
-        }
-        .description-text .bold {
-            font-weight: bold;
-            font-style: italic;
-        }
-        .button-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .button-container button {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 10px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .button-container button:hover {
-            background-color: #333333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buildable Balm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #D0E3FF;
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      color: #000000;
+      margin: 0;
+      padding: 40px 20px;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .intro-text {
+      font-size: 16px;
+      margin: 0;
+      font-style: italic;
+    }
+    .intro-text.bold {
+      font-weight: bold;
+      font-style: normal;
+      margin-top: 8px;
+    }
+    .product-image {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 40px auto;
+    }
+    .bottom-description {
+      font-size: 16px;
+      text-align: right;
+      margin-top: 40px;
+    }
+    .bottom-description .bold {
+      font-weight: bold;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 40px;
+    }
+    .section-title .bold {
+      font-weight: bold;
+    }
+    .vertical-image {
+      width: 60px;
+      display: block;
+      margin: 30px auto;
+    }
+    .function-list {
+      margin-top: 20px;
+      margin-left: 50%;
+      transform: translateX(-10%);
+    }
+    .function-list p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+    .function-list p span {
+      font-weight: bold;
+    }
+    .customize-title {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 50px;
+    }
+    .customize-title .underline {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .description-text {
+      text-align: center;
+      font-size: 16px;
+      font-style: italic;
+      margin-top: 30px;
+    }
+    .description-text .bold {
+      font-weight: bold;
+      font-style: italic;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .button-container button {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .button-container button:hover {
+      background-color: #333333;
+    }
+  </style>
 </head>
 <body>
 
-<section>
+<div id="intro">
+  <section>
     <h1>Buildable Balm</h1>
     <p class="intro-text">One Stick</p>
     <p class="intro-text">is</p>
     <p class="intro-text bold">All You Need</p>
     <img src="去背產品圖_水平翻轉.png" alt="Product" class="product-image">
     <div class="bottom-description">
-        <p><em>Born to be</em> <span class="bold">"Real Multi-Functional"</span>,</p>
-        <p><em>Delighted to be</em></p>
-        <p><span class="bold">Your Life Quality Enhancer</span></p>
+      <p><em>Born to be</em> <span class="bold">"Real Multi-Functional"</span>,</p>
+      <p><em>Delighted to be</em></p>
+      <p><span class="bold">Your Life Quality Enhancer</span></p>
     </div>
-</section>
+  </section>
 
-<section>
+  <section>
     <h2 class="section-title">Each Unit Represent <span class="bold">One</span> Function</h2>
     <img src="Video.gif" alt="Function Image" class="vertical-image">
     <div class="function-list">
-        <p>— <span>L</span>ip Balm</p>
-        <p>— <span>O</span>intment for Acne</p>
-        <p>— <span>R</span>ehydrator (Moisturizer)</p>
-        <p>— <span>E</span>rase Blemishes (Concealer)</p>
-        <p>— <span>A</span>ll-Day SPF (Sunscreen)</p>
-        <p>— <span>L</span>ip Tint</p>
+      <p>— <span>L</span>ip Balm</p>
+      <p>— <span>O</span>intment for Acne</p>
+      <p>— <span>R</span>ehydrator (Moisturizer)</p>
+      <p>— <span>E</span>rase Blemishes (Concealer)</p>
+      <p>— <span>A</span>ll-Day SPF (Sunscreen)</p>
+      <p>— <span>L</span>ip Tint</p>
     </div>
-</section>
+  </section>
 
-<section>
+  <section>
     <h2 class="customize-title">Precision Starts with Choice<br><span class="underline">Customize Yours</span></h2>
     <div class="description-text">
-        <p>Getting Lost in the Skincare Jungle?<br>Not Sure What You Need?</p>
-        <p class="bold">This is for YOU</p>
+      <p>Getting Lost in the Skincare Jungle?<br>Not Sure What You Need?</p>
+      <p class="bold">This is for YOU</p>
     </div>
     <div class="button-container">
-        <button>Let's Figure it out!</button>
+      <button onclick="startQuiz()">Let's Figure it out!</button>
     </div>
-</section>
+  </section>
+</div>
+
+<div id="quiz" style="display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:100vh;">
+  <h2 id="question-text" style="font-family:'Playfair Display', serif; font-size:24px; margin-bottom:20px;"></h2>
+  <div id="options" style="margin-bottom:20px;"></div>
+  <button onclick="nextQuestion()" style="background:black; color:white; font-size:16px; padding:10px 24px; border:none; border-radius:8px; cursor:pointer;">Next</button>
+</div>
+
+<script>
+const quizData = [
+  {
+    question: "What skin concerns are you currently experiencing? (Multiple selections allowed)",
+    options: ["Dry skin", "Acne & breakouts", "No particular concerns"],
+    multiple: true
+  },
+  {
+    question: "What is your usual activity environment? (Single selection)",
+    options: ["Mostly indoors, rarely exposed to sunlight", "Frequently outdoors, need UV protection"],
+    multiple: false
+  },
+  {
+    question: "How would you like your skin to look? (Single selection)",
+    options: ["Want to cover acne scars or even out skin tone", "No need for special coverage"],
+    multiple: false
+  },
+  {
+    question: "What is the current condition of your lips? (Multiple selections allowed)",
+    options: ["Chapped lips / dead skin of lips", "Lips are dull and lackluster", "No particular needs"],
+    multiple: true
+  },
+  {
+    question: "What is your preferred style? (Single selection)",
+    options: ["Function-first (Prioritize basic skincare product)", "Appearance-first (Prioritize make-up product)", "All-rounder (A balanced combination)"],
+    multiple: false
+  }
+];
+
+let currentQuestion = 0;
+let answers = [];
+let selectedItems = [];
+
+function startQuiz() {
+  document.getElementById('intro').style.display = 'none';
+  document.getElementById('quiz').style.display = 'flex';
+  currentQuestion = 0;
+  answers = [];
+  selectedItems = [];
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = quizData[currentQuestion];
+  document.getElementById('question-text').textContent = q.question;
+  const optionsContainer = document.getElementById('options');
+  optionsContainer.innerHTML = '';
+  q.options.forEach((option, index) => {
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    input.type = q.multiple ? 'checkbox' : 'radio';
+    input.name = 'option';
+    input.value = index;
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(option));
+    optionsContainer.appendChild(label);
+  });
+}
+
+function nextQuestion() {
+  const selected = Array.from(document.querySelectorAll('input[name="option"]:checked'));
+  if (selected.length === 0) {
+    alert("Please select at least one option.");
+    return;
+  }
+
+  answers.push(selected.map(el => parseInt(el.value)));
+
+  if (currentQuestion === 3) {
+    mapSelections();
+    if (selectedItems.length === 3) {
+      calculateResultWithoutQ5();
+      return;
+    }
+  }
+
+  if (currentQuestion < quizData.length - 1) {
+    currentQuestion++;
+    showQuestion();
+  } else {
+    mapSelections();
+    calculateResultWithQ5();
+  }
+}
+
+function mapSelections() {
+  selectedItems = [];
+  if (answers[0].includes(0)) selectedItems.push("Rehydrator");
+  if (answers[0].includes(1)) selectedItems.push("Ointment for Acne");
+  if (answers[1].includes(1)) selectedItems.push("All-Day SPF");
+  if (answers[2].includes(0)) selectedItems.push("Erase Blemishes");
+  if (answers[3].includes(0)) selectedItems.push("Lip Balm");
+  if (answers[3].includes(1)) selectedItems.push("Lip Tint");
+}
+
+function calculateResultWithoutQ5() {
+  finalizeSelection();
+}
+
+function calculateResultWithQ5() {
+  const stylePreference = answers[4][0];
+  let supplementItems = [];
+
+  if (selectedItems.length < 3) {
+    if (stylePreference === 1) {
+      if (!selectedItems.includes("Erase Blemishes")) supplementItems.push("Erase Blemishes");
+      if (!selectedItems.includes("Lip Tint")) supplementItems.push("Lip Tint");
+    } else {
+      if (!selectedItems.includes("Rehydrator")) supplementItems.push("Rehydrator");
+      if (!selectedItems.includes("All-Day SPF")) supplementItems.push("All-Day SPF");
+    }
+  }
+
+  selectedItems = [...selectedItems, ...supplementItems];
+  finalizeSelection(stylePreference);
+}
+
+function finalizeSelection(stylePreference = 0) {
+  const plans = {
+    1: ["Lip Balm", "Rehydrator", "All-Day SPF", "Ointment for Acne", "Erase Blemishes", "Lip Tint"],
+    2: ["Lip Tint", "Rehydrator", "All-Day SPF", "Ointment for Acne", "Erase Blemishes", "Lip Balm"],
+    3: ["Lip Tint", "Erase Blemishes", "Lip Balm", "Rehydrator", "All-Day SPF", "Ointment for Acne"]
+  };
+
+  let plan = (stylePreference === 0) ? plans[1] : (stylePreference === 1 ? plans[3] : plans[2]);
+
+  if (selectedItems.includes("Lip Balm") && selectedItems.includes("Lip Tint")) {
+    if (stylePreference === 1) {
+      selectedItems = selectedItems.filter(item => item !== "Lip Balm");
+    } else {
+      selectedItems = selectedItems.filter(item => item !== "Lip Tint");
+    }
+  }
+
+  selectedItems.sort((a, b) => plan.indexOf(a) - plan.indexOf(b));
+  selectedItems = selectedItems.slice(0, 3);
+
+  document.getElementById('quiz').innerHTML = `
+    <h2>Your Customized Recommendation:</h2>
+    <ul style="text-align:left; font-size:20px;">
+      ${selectedItems.map(item => `<li>${item}</li>`).join('')}
+    </ul>
+    <div class="button-container" style="margin-top:30px;">
+      <button onclick="startQuiz()">Start Again</button>
+    </div>
+  `;
+}
+</script>
 
 </body>
 </html>
