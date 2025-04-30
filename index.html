@@ -251,10 +251,10 @@ function nextQuestion() {
 
 function mapSelections() {
   selectedItems = [];
-  if (answers[0].includes(0)) selectedItems.push("Rehydrator");
-  if (answers[0].includes(1)) selectedItems.push("Ointment for Acne");
-  if (answers[1].includes(1)) selectedItems.push("All-Day SPF");
-  if (answers[2].includes(0)) selectedItems.push("Erase Blemishes");
+  if (answers[0].includes(0)) selectedItems.push("Moisturizer");
+  if (answers[0].includes(1)) selectedItems.push("Acne treatment");
+  if (answers[1].includes(1)) selectedItems.push("Sunscreen");
+  if (answers[2].includes(0)) selectedItems.push("Concealer");
   if (answers[3].includes(0)) selectedItems.push("Lip Balm");
   if (answers[3].includes(1)) selectedItems.push("Lip Tint");
 }
@@ -270,10 +270,10 @@ function calculateResultWithQ5() {
   if (selectedItems.length < 3) {
     if (stylePreference === 1) {
       if (!selectedItems.includes("Lip Tint")) supplementItems.push("Lip Tint");
-      if (!selectedItems.includes("Erase Blemishes")) supplementItems.push("Erase Blemishes");
+      if (!selectedItems.includes("Concealer")) supplementItems.push("Concealer");
     } else {
-      if (!selectedItems.includes("Rehydrator")) supplementItems.push("Rehydrator");
-      if (!selectedItems.includes("All-Day SPF")) supplementItems.push("All-Day SPF");
+      if (!selectedItems.includes("Moisturizer")) supplementItems.push("Moisturizer");
+      if (!selectedItems.includes("Sunscreen")) supplementItems.push("Sunscreen");
     }
   }
 
@@ -283,9 +283,9 @@ function calculateResultWithQ5() {
 
 function finalizeSelection(stylePreference = 0) {
   const plans = {
-    1: ["Lip Balm", "Rehydrator", "All-Day SPF", "Ointment for Acne", "Erase Blemishes", "Lip Tint"],
-    2: ["Lip Tint", "Rehydrator", "All-Day SPF", "Ointment for Acne", "Erase Blemishes", "Lip Balm"],
-    3: ["Lip Tint", "Erase Blemishes", "Lip Balm", "Rehydrator", "All-Day SPF", "Ointment for Acne"]
+    1: ["Lip Balm", "Moisturizer", "Sunscreen", "Acne treatment", "Concealer", "Lip Tint"],
+    2: ["Lip Tint", "Moisturizer", "Sunscreen", "Acne treatment", "Concealer", "Lip Balm"],
+    3: ["Lip Tint", "Concealer", "Lip Balm", "Moisturizer", "Sunscreen", "Acne treatment"]
   };
 
   let plan = (stylePreference === 0) ? plans[1] : (stylePreference === 1 ? plans[3] : plans[2]);
