@@ -302,12 +302,12 @@ function finalizeSelection(stylePreference = 0) {
   selectedItems = selectedItems.slice(0, 3);
 
   document.getElementById('quiz').innerHTML = `
-    <h2>Your Customized Recommendation:</h2>
+    <h2>Recommended Formula:</h2>
     <ul style="text-align:left; font-size:20px;">
       ${selectedItems.map(item => `<li>${item}</li>`).join('')}
     </ul>
     <div class="button-container" style="margin-top:30px;">
-      <button onclick="startQuiz()">Add to cart🛒</button>
+      <button onclick="startQuiz()">Add to cart</button>
     </div>
   `;
 }
